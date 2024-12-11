@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantitative Chemistry one shot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Lecture on Quantitative Chemistry</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -15,23 +15,28 @@
 
         header {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 1.5rem 1rem;
             background: rgba(0, 0, 0, 0.8);
             position: sticky;
             top: 0;
             z-index: 10;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
+            transition: all 0.3s ease;
+        }
+
+        header.shrink {
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin: 0;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin: 0.5rem 0 0;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
         }
@@ -138,16 +143,15 @@
             }
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
             }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
-    <script>
+        });
+
         function toggleCollapsible() {
             const content = document.getElementById('collapsible-content');
             if (content.style.maxHeight) {
@@ -156,7 +160,7 @@
                 content.style.maxHeight = content.scrollHeight + 'px';
             }
         }
-    </script>
+    </style>
 </head>
 <body>
     <header>
@@ -166,7 +170,7 @@
 
     <div class="main-container">
         <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/VgEBQExGJtk" title="Quantitative Chemistry Lecture Video"></iframe>
+            <iframe src="https://www.youtube.com/embed/x-FPNWU5Kiw" title="Quantitative Chemistry Lecture Video"></iframe>
         </div>
 
         <div class="collapsible">
