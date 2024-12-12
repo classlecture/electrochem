@@ -6,6 +6,7 @@
     <title>Lecture on Quantitative Chemistry</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* CSS here */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -142,24 +143,6 @@
                 box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.8);
             }
         }
-
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shrink');
-            } else {
-                header.classList.remove('shrink');
-            }
-        });
-
-        function toggleCollapsible() {
-            const content = document.getElementById('collapsible-content');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        }
     </style>
 </head>
 <body>
@@ -183,9 +166,31 @@
 
     <footer>
         <p>&copy; 2024 AloronXYZ- Mottasin Pahlovi. All Rights Reserved.<br>
-            NB:This webpage never claims to be official acs website. It's just to find easily and make more customized to my preference.<br>
+            NB: This webpage never claims to be the official ACS website. It's just to find easily and make more customized to my preference.<br>
             <a href="https://www.youtube.com/@aloronxyz/">Visit AloronXYZ on YouTube</a>
         </p>
     </footer>
+
+    <script>
+        // JavaScript to handle header shrinking
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+
+        // JavaScript for collapsible content
+        function toggleCollapsible() {
+            const content = document.getElementById('collapsible-content');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+    </script>
 </body>
 </html>
