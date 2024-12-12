@@ -3,194 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture on Quantitative Chemistry</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Quantitative Chemistry - Lecture Index</title>
     <style>
-        /* CSS here */
         body {
-            margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            color: #333;
         }
-
         header {
             text-align: center;
-            padding: 1.5rem 1rem;
-            background: rgba(0, 0, 0, 0.8);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-
-        header.shrink {
-            padding: 0.8rem 1rem;
-            font-size: 0.9rem;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .main-container {
-            padding: 3rem 2rem;
-        }
-
-        .video-box {
-            max-width: 800px;
-            margin: 2rem auto;
-            border-radius: 15px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: glowEffect 4s infinite alternate;
-        }
-
-        .video-box iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-        }
-
-        .collapsible {
-            max-width: 800px;
-            margin: 2rem auto;
-            text-align: center;
-        }
-
-        .collapsible button {
-            width: 100%;
-            padding: 1.5rem;
-            font-size: 1.3rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #3c8dbc, #2a5298);
+            padding: 20px;
+            background: #333;
             color: white;
-            border: none;
+            font-size: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
             border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #186622;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
-
-        .collapsible button i {
-            margin-right: 0.5rem;
+        li:hover {
+            background: #f9c74f;
+            transform: translateY(-2px);
         }
-
-        .collapsible button:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
-        }
-
-        .collapsible-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.6s ease-out;
-            border-radius: 15px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
-            margin-top: 1rem;
-        }
-
-        .collapsible-content iframe {
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            display: block;
             width: 100%;
-            height: 500px;
-            border: none;
         }
-
+        a:hover {
+            color: #2d6a4f;
+        }
         footer {
             text-align: center;
-            padding: 2rem;
-            background: rgba(0, 0, 0, 0.8);
-            margin-top: 3rem;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1.2rem;
-            color: #a5d6ed;
-        }
-
-        footer p a {
-            color: #f7c08a;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        footer p a:hover {
-            color: #ffdf8a;
-        }
-
-        @keyframes glowEffect {
-            from {
-                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
-            }
-            to {
-                box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.8);
-            }
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Lecture on Quantitative Chemistry</h1>
-        <p>Your guide to mastering chemical calculations and stoichiometry</p>
-    </header>
-
-    <div class="main-container">
-        <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/WufYDcpttAA?rel=0" allowfullscreen title="Quantitative Chemistry Lecture Video"></iframe>
-        </div>
-
-        <div class="collapsible">
-            <button onclick="toggleCollapsible()"><i class="fas fa-slideshare"></i>View Lecture Slides</button>
-            <div class="collapsible-content" id="collapsible-content">
-                <iframe src="https://drive.google.com/file/d/1eNRlgfuZD_giE-e8WMmlAhLCmmRGSJ6n/preview" title="Quantitative Chemistry Lecture Slides"></iframe>
-            </div>
-        </div>
+    <header>Quantitative Chemistry</header>
+    <div class="container">
+        <h2><b>Lecture serial</b></h2>
+        <ul>
+            <li><a href="lecture1.html">Lecture 1</a></li>
+            <li><a href="lecture2.html">Lecture 2</a></li>
+            <li><a href="lecture3.html">Lecture 3</a></li>
+            <li><a href="lecture4.html">Lecture 4</a></li>
+            <li><a href="lecture5.html">Lecture 5</a></li>
+            <li><a href="lecture6.html">Lecture 6</a></li>
+            <li><a href="lecture7.html">Lecture 7</a></li>
+            <li><a href="lecture8.html">Lecture 8</a></li>
+            <li><a href="lecture9.html">Lecture 9</a></li>
+            <li><a href="lecture10.html">Lecture 10</a></li>
+            <li><a href="lecture11.html">Lecture 11</a></li>
+            <li><a href="lecture12.html">Lecture 12</a></li>
+            <li><a href="lecture13.html">Lecture 13</a></li>
+        </ul>
     </div>
-
-    <footer>
-        <p>&copy; 2024 AloronXYZ- Mottasin Pahlovi. All Rights Reserved.<br>
-            NB: This webpage never claims to be the official ACS website. It's just to find easily and make more customized to my preference.<br>
-            <a href="https://www.youtube.com/@aloronxyz/">Visit AloronXYZ on YouTube</a>
-        </p>
-    </footer>
-
-    <script>
-        // JavaScript to handle header shrinking
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shrink');
-            } else {
-                header.classList.remove('shrink');
-            }
-        });
-
-        // JavaScript for collapsible content
-        function toggleCollapsible() {
-            const content = document.getElementById('collapsible-content');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        }
-    </script>
 </body>
 </html>
