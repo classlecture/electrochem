@@ -18,7 +18,34 @@
                 allowfullscreen>
             </iframe>
         </div>
+        <div class="collapsible">
+            <button onclick="toggleCollapsible()"><i class="fas fa-slideshare"></i>View Lecture Slides</button>
+            <div class="collapsible-content" id="collapsible-content">
+                <iframe src="https://drive.google.com/file/d/1smhYZ1prFs9-DeffY8gfF3JU97PRivHC/preview" title="Quantitative Chemistry Lecture Slides"></iframe>
+            </div>
+        </div>
         <a class="back-link" href="index.html">Back to Lecture Index</a>
     </div>
+    <script>
+        // JavaScript to handle header shrinking
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+
+        // JavaScript for collapsible content
+        function toggleCollapsible() {
+            const content = document.getElementById('collapsible-content');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+    </script>
 </body>
 </html>
